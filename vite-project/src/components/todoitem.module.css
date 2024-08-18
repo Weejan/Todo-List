@@ -1,0 +1,9 @@
+.item {
+  padding: 10px 0px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.line {
+  border: 1px solid #e8e8e8;
+}
