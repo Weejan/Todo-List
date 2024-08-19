@@ -2,13 +2,30 @@ import style from "./todoitem.module.css";
 
 export default function TodoItem({ item, todos, setTodos }) {
   function handleDelete(item) {
-    setTodos(todos.filter((todo) => todo.name !== item));
+    setTodos(todos.filter((todo) => todo !== item));
   }
+
+  function handleComplete(item) {
+    setTodos(
+      todos.map((todo) =>
+        todo === item ? { ...todo, done: !todo.done } : todo
+      )
+    );
+  }
+
+  const slice = item.done ? style.slice : "";
   return (
     <>
       <div>
-        <div className={style.item} id={item}>
-          {item}
+        <div className={style.item}>
+          <span
+            className={slice}
+            onClick={() => {
+              handleComplete(item);
+            }}
+          >
+            {item.name}
+          </span>
           <span>
             <button
               onClick={() => {

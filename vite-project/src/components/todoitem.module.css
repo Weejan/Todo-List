@@ -5,6 +5,7 @@
   padding: 10px 0px;
   font-size: 18px;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .line {
@@ -19,4 +20,12 @@
   border-radius: 8px;
   padding: 5px 10px;
   cursor: pointer;
+}
+
+.slice {
+  text-decoration-line: line-through;
+  text-decoration-style: solid;
+  text-decoration-color: black;
+  text-decoration-thickness: 2px;
+  font-weight: 900;
 }
